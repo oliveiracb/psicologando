@@ -101,5 +101,9 @@ public class MaterialApoio implements Identificavel{
 			return false;
 		return true;
 	}
+	public void save(MaterialApoio user) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
