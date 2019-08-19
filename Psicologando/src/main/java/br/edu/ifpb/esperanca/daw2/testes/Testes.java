@@ -14,16 +14,32 @@ import br.edu.ifpb.esperanca.daw2.psicologando.entities.AlarmeMed;
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.PontoApoio;
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.TerapiaAdj;
 import br.edu.ifpb.esperanca.daw2.psicologando.interfaces.Psicologando;
+import br.edu.ifpb.esperanca.daw2.services.UserService;
 
 class Testes {
 
   @Test
   void  cadastrarUsu() {
-    Psicologando a = null;
+    UserService a = null;
     Usuario usuario = new Usuario();
-    Usuario u = a.cadastrarUsu(usuario);
-    assertNotNull(u);
-    assertEquals("", u.getId());
+    a.save(usuario);
+    assertNotNull(usuario.getId());
+    
+    Usuario outro = a.getByID(usuario.getId());
+   assertEquals(outro, usuario);
+   
+   outro.setEmail("dfghj");
+   a.update(outro);
+   
+   Usuario outro2 = a.getByID(usuario.getId());
+   assertEquals(outro2.getEmail(), "dfghj");
+   
+   a.remove(outro2);
+   
+   Usuario outro3 = a.getByID(usuario.getId());
+   
+   assertNull(outro3);
+   
 }
 
   @Test

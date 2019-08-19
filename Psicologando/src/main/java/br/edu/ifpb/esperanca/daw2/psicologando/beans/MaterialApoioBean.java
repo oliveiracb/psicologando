@@ -6,14 +6,16 @@ import java.util.Collection;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
+import br.edu.ifpb.esperanca.daw2.psicologando.entities.MaterialApoio;
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.Usuario;
+import br.edu.ifpb.esperanca.daw2.services.MaterialApoioService;
 import br.edu.ifpb.esperanca.daw2.services.UserService;
 
 public class MaterialApoioBean implements Serializable {
 	@Inject
 	private UserService service;
 
-	protected Usuario entidade;
+	protected MaterialApoio entidade;
 
 	protected Collection<Usuario> entidades;
 
@@ -26,24 +28,24 @@ public class MaterialApoioBean implements Serializable {
 		entidades = getService().getAll();
 	}
 
-	public void remove(Usuario entidade) {
+	public void remove(MaterialApoio entidade) {
 		getService().remove(entidade);
 		limpar();
 	}
 
-	public Usuario getEntidade() {
+	public MaterialApoio getEntidade() {
 		return entidade;
 	}
 
-	public void setEntidade(Usuario entidade) {
+	public void setEntidade(MaterialApoio entidade) {
 		this.entidade = entidade;
 	}
 
-	public Collection<Usuario> getEntidades() {
+	public Collection<MaterialApoio> getEntidades() {
 		return entidades;
 	}
 
-	public void setEntidades(Collection<Usuario> entidades) {
+	public void setEntidades(Collection<MaterialApoio> entidades) {
 		this.entidades = entidades;
 	}
 
@@ -62,8 +64,8 @@ public class MaterialApoioBean implements Serializable {
 		entidade = newEntidade();
 	}
 
-	protected Usuario newEntidade() {
-		return new Usuario();
+	protected MaterialApoio newEntidade() {
+		return new MaterialApoio();
 	}
 
 	public UserService getService() {

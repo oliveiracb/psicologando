@@ -4,18 +4,24 @@ import java.io.Serializable;
 import java.util.Collection;
 
 import javax.annotation.PostConstruct;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
+import javax.inject.Named;
 
+import br.edu.ifpb.esperanca.daw2.psicologando.entities.Paciente;
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.Usuario;
+import br.edu.ifpb.esperanca.daw2.services.PacienteService;
 import br.edu.ifpb.esperanca.daw2.services.UserService;
 
+@ViewScoped
+@Named
 public class PacienteBean implements Serializable{
 	@Inject
-	private UserService service;
+	private PacienteService service;
 
-	protected Usuario entidade;
+	protected Paciente entidade;
 
-	protected Collection<Usuario> entidades;
+	protected Collection<Paciente> entidades;
 
 	public PacienteBean() {
 	}
@@ -26,7 +32,7 @@ public class PacienteBean implements Serializable{
 		entidades = getService().getAll();
 	}
 
-	public void remove(Usuario entidade) {
+	public void remove(Paciente entidade) {
 		getService().remove(entidade);
 		limpar();
 	}
@@ -35,15 +41,15 @@ public class PacienteBean implements Serializable{
 		return entidade;
 	}
 
-	public void setEntidade(Usuario entidade) {
+	public void setEntidade(Paciente entidade) {
 		this.entidade = entidade;
 	}
 
-	public Collection<Usuario> getEntidades() {
+	public Collection<Paciente> getEntidades() {
 		return entidades;
 	}
 
-	public void setEntidades(Collection<Usuario> entidades) {
+	public void setEntidades(Collection<Paciente> entidades) {
 		this.entidades = entidades;
 	}
 
@@ -62,11 +68,11 @@ public class PacienteBean implements Serializable{
 		entidade = newEntidade();
 	}
 
-	protected Usuario newEntidade() {
-		return new Usuario();
+	protected Paciente newEntidade() {
+		return new Paciente();
 	}
 
-	public UserService getService() {
+	public PacienteService getService() {
 		return service;
 	}
 
