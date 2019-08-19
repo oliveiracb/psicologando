@@ -16,8 +16,9 @@ public class MaterialApoioBean implements Serializable {
 	private UserService service;
 
 	protected MaterialApoio entidade;
+	
+	protected Collection<MaterialApoio> entidades;
 
-	protected Collection<Usuario> entidades;
 
 	public MaterialApoioBean() {
 	}
