@@ -20,7 +20,7 @@ public class MuralBean implements Serializable{
 
 	protected Mural entidade;
 
-	protected Mural entidades;
+	protected List<Mural> entidades;
 
 	public MuralBean() {
 	}

@@ -24,7 +24,7 @@ public class TerapiaAdjBean implements Serializable{
 	@PostConstruct
 	public void init() {
 		entidade = newEntidade();
-		entidades = getService().getAll();
+		entidade = getService().getAll();
 	}
 
 	public void remove(TerapiaAdj entidade) {
