@@ -29,16 +29,17 @@ public class PontoApoioBean implements Serializable{
 		entidades = getService().getAll();
 	}
 
+
 	public void remove(PontoApoio entidade) {
 		getService().remove(entidade);
 		limpar();
 	}
 
-	public Usuario getEntidade() {
+	public PontoApoio getEntidade() {
 		return entidade;
 	}
 
-	public void setEntidade(Usuario entidade) {
+	public void setEntidade(PontoApoio entidade) {
 		this.entidade = entidade;
 	}
 

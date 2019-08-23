@@ -15,7 +15,7 @@ public class PsicologoBean implements Serializable{
 	@Inject
 	private PsicologoService service;
 
-	protected Usuario entidade;
+	protected Psicologo entidade;
 
 	protected Collection<Psicologo> entidades;
 
@@ -33,7 +33,7 @@ public class PsicologoBean implements Serializable{
 		limpar();
 	}
 
-	public Usuario getEntidade() {
+	public Psicologo getEntidade() {
 		return entidade;
 	}
 

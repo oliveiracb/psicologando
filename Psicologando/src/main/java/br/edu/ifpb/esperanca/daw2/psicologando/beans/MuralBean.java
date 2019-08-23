@@ -20,7 +20,7 @@ public class MuralBean implements Serializable{
 
 	protected Mural entidade;
 
-	protected List<Mural> entidades;
+	protected Mural entidades;
 
 	public MuralBean() {
 	}
@@ -32,11 +32,11 @@ public class MuralBean implements Serializable{
 	}
 
 	public void remove(Mural entidade) {
-		getService().remove(texto);
+		getService().remove(entidade);
 		limpar();
 	}
 
-	public Usuario getEntidade() {
+	public Mural getEntidade() {
 		return entidade;
 	}
 

@@ -2,6 +2,7 @@ package br.edu.ifpb.esperanca.daw2.psicologando.beans;
 
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
@@ -15,7 +16,7 @@ public class TerapiaAdjBean implements Serializable{
 	@Inject
 	private TerapiaAdjService service;
 
-	protected TerapiaAdj entidade;
+	protected List<TerapiaAdj> entidade;
 
 	public TerapiaAdjBean() {
 	}
@@ -23,7 +24,7 @@ public class TerapiaAdjBean implements Serializable{
 	@PostConstruct
 	public void init() {
 		entidade = newEntidade();
-		entidade = getService().getAll();
+		entidades = getService().getAll();
 	}
 
 	public void remove(TerapiaAdj entidade) {
