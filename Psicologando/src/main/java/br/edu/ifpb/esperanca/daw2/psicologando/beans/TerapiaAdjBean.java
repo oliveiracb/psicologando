@@ -62,7 +62,7 @@ public class TerapiaAdjBean implements Serializable{
 		entidade = newEntidade();
 	}
 
-	protected Collection<TerapiaAdj> newEntidade() {
+	protected TerapiaAdj newEntidade() {
 		return new TerapiaAdj();
 	}
 
