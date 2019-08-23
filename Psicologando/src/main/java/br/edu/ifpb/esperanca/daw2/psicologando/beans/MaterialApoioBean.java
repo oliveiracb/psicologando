@@ -13,7 +13,7 @@ import br.edu.ifpb.esperanca.daw2.services.UserService;
 
 public class MaterialApoioBean implements Serializable {
 	@Inject
-	private UserService service;
+	private MaterialApoioService service;
 
 	protected MaterialApoio entidade;
 	
@@ -69,7 +69,7 @@ public class MaterialApoioBean implements Serializable {
 		return new MaterialApoio();
 	}
 
-	public UserService getService() {
+	public MaterialApoioService getService() {
 		return service;
 	}
 

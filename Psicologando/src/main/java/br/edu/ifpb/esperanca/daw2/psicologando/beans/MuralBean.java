@@ -6,12 +6,14 @@ import java.util.Collection;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
+import br.edu.ifpb.esperanca.daw2.psicologando.entities.Mural;
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.Usuario;
+import br.edu.ifpb.esperanca.daw2.services.MuralService;
 import br.edu.ifpb.esperanca.daw2.services.UserService;
 
 public class MuralBean implements Serializable{
 	@Inject
-	private UserService service;
+	private MuralService service;
 
 	protected Usuario entidade;
 
@@ -26,7 +28,7 @@ public class MuralBean implements Serializable{
 		entidades = getService().getAll();
 	}
 
-	public void remove(Usuario entidade) {
+	public void remove(Mural entidade) {
 		getService().remove(entidade);
 		limpar();
 	}
