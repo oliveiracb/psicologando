@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 
+import br.edu.ifpb.esperanca.daw2.psicologando.beans.AlarmeMedBean;
+
 @Entity
 public class AlarmeMed implements Identificavel{
 	@Id
@@ -113,6 +115,10 @@ public class AlarmeMed implements Identificavel{
 		} else if (!titulo.equals(other.titulo))
 			return false;
 		return true;
+	}
+	public void remove(AlarmeMedBean entidade) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 
