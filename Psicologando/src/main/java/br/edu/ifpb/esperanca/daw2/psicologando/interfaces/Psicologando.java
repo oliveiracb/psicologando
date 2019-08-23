@@ -17,6 +17,7 @@ package br.edu.ifpb.esperanca.daw2.psicologando.interfaces;
 	public Mural addRelato(Paciente paciente, Mural muralRelatar);
 	public void acessarRelato(Usuario usuario, Mural muralRelatar);
 	public Mural enviarRelato(Paciente paciente, Mural muralRelato);
+	public void removerRelato(Psicologo psicologo,Mural muralRelato);
 	public Psicologo editarMural(Psicologo psicologo, Mural editarRelatos );
 	public AlarmeMed addHoraMedicamento(Paciente paciente, AlarmeMed addHoraMed);
 	public void alarmarMed( Paciente paciente, AlarmeMed alarmarParaTomarMed  );  
