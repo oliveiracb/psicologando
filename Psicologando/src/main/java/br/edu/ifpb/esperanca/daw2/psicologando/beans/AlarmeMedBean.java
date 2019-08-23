@@ -8,6 +8,7 @@ import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import br.edu.ifpb.esperanca.daw2.psicologando.entities.AlarmeMed;
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.Usuario;
 import br.edu.ifpb.esperanca.daw2.services.UserService;
 
@@ -15,44 +16,42 @@ import br.edu.ifpb.esperanca.daw2.services.UserService;
 @Named
 public class AlarmeMedBean implements Serializable {
 	@Inject
-	private UserService service;
+	private AlarmeMed service;
 
-	protected Usuario entidade;
-
-	protected Collection<Usuario> entidades;
+	protected Collection<AlarmeMedBean> entidades;
 
 	public AlarmeMedBean() {
 	}
 	
 	@PostConstruct
 	public void init() {
-		entidade = newEntidade();
+		entidades = newEntidade();
 		entidades = getService().getAll();
 	}
 
-	public void remove(Usuario entidade) {
+	public void remove(AlarmeMedBean entidade) {
 		getService().remove(entidade);
 		limpar();
 	}
 
-	public Usuario getEntidade() {
-		return entidade;
-	}
-
-	public void setEntidade(Usuario entidade) {
-		this.entidade = entidade;
-	}
-
-	public Collection<Usuario> getEntidades() {
+	public AlarmeMedBean getEntidade() {
 		return entidades;
 	}
 
-	public void setEntidades(Collection<Usuario> entidades) {
+	public void setEntidade(AlarmeMedBean entidade) {
+		this.entidades = entidade;
+	}
+
+	public Collection<AlarmeMedBean> getEntidades() {
+		return entidades;
+	}
+
+	public void setEntidades(Collection<AlarmeMedBean> entidades) {
 		this.entidades = entidades;
 	}
 
 	public void save() {
-		getService().save(entidade);
+		getService().save(entidades);
 		limpar();
 	}
 
@@ -63,14 +62,14 @@ public class AlarmeMedBean implements Serializable {
 
 	public void limpar() {
 		entidades = getService().getAll();
-		entidade = newEntidade();
+		entidades = newEntidade();
 	}
 
-	protected Usuario newEntidade() {
-		return new Usuario();
+	protected AlarmeMedBean newEntidade() {
+		return new AlarmeMedBean();
 	}
 
-	public UserService getService() {
+	public AlarmeMed getService() {
 		return service;
 	}
 

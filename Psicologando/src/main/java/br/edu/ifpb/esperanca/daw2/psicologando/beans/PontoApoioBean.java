@@ -6,18 +6,21 @@ import java.util.Collection;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
+import br.edu.ifpb.esperanca.daw2.psicologando.entities.PontoApoio;
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.Usuario;
+import br.edu.ifpb.esperanca.daw2.services.PontoApoioService;
 import br.edu.ifpb.esperanca.daw2.services.UserService;
 
 public class PontoApoioBean implements Serializable{
 	@Inject
-	private UserService service;
+	private PontoApoioService service;
 
-	protected Usuario entidade;
+	protected PontoApoio entidade;
 
-	protected Collection<Usuario> entidades;
+	protected Collection<PontoApoio> entidades;
 
 	public PontoApoioBean() {
+		
 	}
 	
 	@PostConstruct
@@ -26,7 +29,7 @@ public class PontoApoioBean implements Serializable{
 		entidades = getService().getAll();
 	}
 
-	public void remove(Usuario entidade) {
+	public void remove(PontoApoio entidade) {
 		getService().remove(entidade);
 		limpar();
 	}
@@ -39,11 +42,11 @@ public class PontoApoioBean implements Serializable{
 		this.entidade = entidade;
 	}
 
-	public Collection<Usuario> getEntidades() {
+	public Collection<PontoApoio> getEntidades() {
 		return entidades;
 	}
 
-	public void setEntidades(Collection<Usuario> entidades) {
+	public void setEntidades(Collection<PontoApoio> entidades) {
 		this.entidades = entidades;
 	}
 
@@ -62,11 +65,11 @@ public class PontoApoioBean implements Serializable{
 		entidade = newEntidade();
 	}
 
-	protected Usuario newEntidade() {
-		return new Usuario();
+	protected PontoApoio newEntidade() {
+		return new PontoApoio();
 	}
 
-	public UserService getService() {
+	public PontoApoioService getService() {
 		return service;
 	}
 

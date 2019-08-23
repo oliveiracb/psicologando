@@ -31,7 +31,7 @@ public class MuralBean implements Serializable{
 		entidades = getService().getAll();
 	}
 
-	public void remove(Relato entidade) {
+	public void remove(Mural entidade) {
 		getService().remove(texto);
 		limpar();
 	}
@@ -44,7 +44,7 @@ public class MuralBean implements Serializable{
 		this.entidade = entidade;
 	}
 
-	public Collection<Usuario> getEntidades() {
+	public Collection<Mural> getEntidades() {
 		return entidades;
 	}
 

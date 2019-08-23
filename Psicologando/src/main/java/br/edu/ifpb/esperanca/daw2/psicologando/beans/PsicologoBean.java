@@ -6,16 +6,18 @@ import java.util.Collection;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
+import br.edu.ifpb.esperanca.daw2.psicologando.entities.Psicologo;
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.Usuario;
+import br.edu.ifpb.esperanca.daw2.services.PsicologoService;
 import br.edu.ifpb.esperanca.daw2.services.UserService;
 
 public class PsicologoBean implements Serializable{
 	@Inject
-	private UserService service;
+	private PsicologoService service;
 
 	protected Usuario entidade;
 
-	protected Collection<Usuario> entidades;
+	protected Collection<Psicologo> entidades;
 
 	public PsicologoBean() {
 	}
@@ -26,7 +28,7 @@ public class PsicologoBean implements Serializable{
 		entidades = getService().getAll();
 	}
 
-	public void remove(Usuario entidade) {
+	public void remove(Psicologo entidade) {
 		getService().remove(entidade);
 		limpar();
 	}
@@ -35,15 +37,15 @@ public class PsicologoBean implements Serializable{
 		return entidade;
 	}
 
-	public void setEntidade(Usuario entidade) {
+	public void setEntidade(Psicologo entidade) {
 		this.entidade = entidade;
 	}
 
-	public Collection<Usuario> getEntidades() {
+	public Collection<Psicologo> getEntidades() {
 		return entidades;
 	}
 
-	public void setEntidades(Collection<Usuario> entidades) {
+	public void setEntidades(Collection<Psicologo> entidades) {
 		this.entidades = entidades;
 	}
 
@@ -62,11 +64,11 @@ public class PsicologoBean implements Serializable{
 		entidade = newEntidade();
 	}
 
-	protected Usuario newEntidade() {
-		return new Usuario();
+	protected Psicologo newEntidade() {
+		return new Psicologo();
 	}
 
-	public UserService getService() {
+	public PsicologoService getService() {
 		return service;
 	}
 

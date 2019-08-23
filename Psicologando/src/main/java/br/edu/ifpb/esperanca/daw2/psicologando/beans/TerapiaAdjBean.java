@@ -6,16 +6,16 @@ import java.util.Collection;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
+import br.edu.ifpb.esperanca.daw2.psicologando.entities.TerapiaAdj;
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.Usuario;
+import br.edu.ifpb.esperanca.daw2.services.TerapiaAdjService;
 import br.edu.ifpb.esperanca.daw2.services.UserService;
 
 public class TerapiaAdjBean implements Serializable{
 	@Inject
-	private UserService service;
+	private TerapiaAdjService service;
 
-	protected Usuario entidade;
-
-	protected Collection<Usuario> entidades;
+	protected TerapiaAdj entidade;
 
 	public TerapiaAdjBean() {
 	}
@@ -23,28 +23,28 @@ public class TerapiaAdjBean implements Serializable{
 	@PostConstruct
 	public void init() {
 		entidade = newEntidade();
-		entidades = getService().getAll();
+		entidade = getService().getAll();
 	}
 
-	public void remove(Usuario entidade) {
+	public void remove(TerapiaAdj entidade) {
 		getService().remove(entidade);
 		limpar();
 	}
 
-	public Usuario getEntidade() {
+	public TerapiaAdj getEntidade() {
 		return entidade;
 	}
 
-	public void setEntidade(Usuario entidade) {
+	public void setEntidade(TerapiaAdj entidade) {
 		this.entidade = entidade;
 	}
 
-	public Collection<Usuario> getEntidades() {
-		return entidades;
+	public Collection<TerapiaAdj> getEntidades() {
+		return entidade;
 	}
 
-	public void setEntidades(Collection<Usuario> entidades) {
-		this.entidades = entidades;
+	public void setEntidades(Collection<TerapiaAdj> entidades) {
+		this.entidade = entidades;
 	}
 
 	public void save() {
@@ -58,15 +58,15 @@ public class TerapiaAdjBean implements Serializable{
 	}
 
 	public void limpar() {
-		entidades = getService().getAll();
+		entidade = getService().getAll();
 		entidade = newEntidade();
 	}
 
-	protected Usuario newEntidade() {
-		return new Usuario();
+	protected Collection<TerapiaAdj> newEntidade() {
+		return new TerapiaAdj();
 	}
 
-	public UserService getService() {
+	public TerapiaAdjService getService() {
 		return service;
 	}
 
