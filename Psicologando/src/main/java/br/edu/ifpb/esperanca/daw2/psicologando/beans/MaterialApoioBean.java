@@ -32,6 +32,7 @@ public class MaterialApoioBean implements Serializable {
 	public void remove(MaterialApoio entidade) {
 		getService().remove(entidade);
 		limpar();
+		
 	}
 
 	public MaterialApoio getEntidade() {
