@@ -9,49 +9,56 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.AlarmeMed;
+import br.edu.ifpb.esperanca.daw2.psicologando.entities.MaterialApoio;
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.Usuario;
+import br.edu.ifpb.esperanca.daw2.services.AlarmeMedService;
+import br.edu.ifpb.esperanca.daw2.services.MaterialApoioService;
 import br.edu.ifpb.esperanca.daw2.services.UserService;
 
 @ViewScoped
 @Named
 public class AlarmeMedBean implements Serializable {
 	@Inject
-	private AlarmeMed service;
+	private AlarmeMedService service;
 
-	protected Collection<AlarmeMedBean> entidades;
+	protected AlarmeMed entidade;
+	
+	protected Collection<AlarmeMed> entidades;
+
 
 	public AlarmeMedBean() {
 	}
 	
 	@PostConstruct
 	public void init() {
-		entidades = newEntidade();
+		entidade = newEntidade();
 		entidades = getService().getAll();
 	}
 
-	public void remove(AlarmeMedBean entidade) {
+	public void remove(AlarmeMed entidade) {
 		getService().remove(entidade);
 		limpar();
+		
 	}
 
-	public AlarmeMedBean getEntidade() {
+	public AlarmeMed getEntidade() {
+		return entidade;
+	}
+
+	public void setEntidade(AlarmeMed entidade) {
+		this.entidade = entidade;
+	}
+
+	public Collection<AlarmeMed> getEntidades() {
 		return entidades;
 	}
 
-	public void setEntidade(AlarmeMedBean entidade) {
-		this.entidades = entidade;
-	}
-
-	public Collection<AlarmeMedBean> getEntidades() {
-		return entidades;
-	}
-
-	public void setEntidades(Collection<AlarmeMedBean> entidades) {
+	public void setEntidades(Collection<AlarmeMed> entidades) {
 		this.entidades = entidades;
 	}
 
 	public void save() {
-		getService().save(entidades);
+		getService().save(entidade);
 		limpar();
 	}
 
@@ -62,14 +69,14 @@ public class AlarmeMedBean implements Serializable {
 
 	public void limpar() {
 		entidades = getService().getAll();
-		entidades = newEntidade();
+		entidade = newEntidade();
 	}
 
-	protected AlarmeMedBean newEntidade() {
-		return new AlarmeMedBean();
+	protected AlarmeMed newEntidade() {
+		return new AlarmeMed();
 	}
 
-	public AlarmeMed getService() {
+	public AlarmeMedService getService() {
 		return service;
 	}
 
