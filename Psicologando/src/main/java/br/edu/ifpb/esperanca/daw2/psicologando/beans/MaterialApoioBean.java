@@ -60,7 +60,7 @@ public class MaterialApoioBean implements Serializable {
 		this.getEntidade().setId(id);
 		save();
 	}
-	
+
 	public void limpar() {
 		entidades = getService().getAll();
 		entidade = newEntidade();

@@ -39,7 +39,7 @@ public class MuralBean implements Serializable{
 		limpar();
 		
 	}
-	
+
 	public Mural getEntidade() {
 		return entidade;
 	}

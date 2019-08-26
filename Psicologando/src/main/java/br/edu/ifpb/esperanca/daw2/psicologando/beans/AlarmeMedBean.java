@@ -75,7 +75,7 @@ public class AlarmeMedBean implements Serializable {
 	protected AlarmeMed newEntidade() {
 		return new AlarmeMed();
 	}
-
+	
 	public AlarmeMedService getService() {
 		return service;
 	}
