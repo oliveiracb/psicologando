@@ -79,5 +79,5 @@ public class AlarmeMedBean implements Serializable {
 	public AlarmeMedService getService() {
 		return service;
 	}
-
+	
 }

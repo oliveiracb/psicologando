@@ -68,7 +68,7 @@ public class TerapiaAdjBean implements Serializable{
 		entidades = getService().getAll();
 		entidade = newEntidade();
 	}
-
+	
 	protected TerapiaAdj newEntidade() {
 		return new TerapiaAdj();
 	}
@@ -76,5 +76,5 @@ public class TerapiaAdjBean implements Serializable{
 	public TerapiaAdjService getService() {
 		return service;
 	}
-
+	
 }
