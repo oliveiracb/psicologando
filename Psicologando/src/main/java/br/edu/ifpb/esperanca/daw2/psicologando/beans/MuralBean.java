@@ -17,6 +17,7 @@ import br.edu.ifpb.esperanca.daw2.services.UserService;
 public class MuralBean implements Serializable{
 	private static final Usuario texto = null;
 
+	
 	@Inject
 	private MuralService service;
 

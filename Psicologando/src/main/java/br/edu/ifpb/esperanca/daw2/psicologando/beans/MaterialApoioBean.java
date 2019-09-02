@@ -19,7 +19,6 @@ public class MaterialApoioBean implements Serializable {
 	
 	protected Collection<MaterialApoio> entidades;
 
-
 	public MaterialApoioBean() {
 	}
 	

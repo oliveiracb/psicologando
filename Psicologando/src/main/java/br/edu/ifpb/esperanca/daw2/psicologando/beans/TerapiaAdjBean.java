@@ -24,6 +24,7 @@ public class TerapiaAdjBean implements Serializable{
 
 	public TerapiaAdjBean() {
 	}
+
 	
 	@PostConstruct
 	public void init() {
