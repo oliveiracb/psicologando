@@ -74,5 +74,4 @@ public class TerapiaAdjBean implements Serializable{
 	public TerapiaAdjService getService() {
 		return service;
 	}
-	
 }
