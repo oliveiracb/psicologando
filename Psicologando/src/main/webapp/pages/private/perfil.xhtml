@@ -11,62 +11,41 @@
 <h:body>
 	<p:messages />
 
-	<h:form>
-		<p:panelGrid columns="2" >
-			<f:facet name="caption">
-				<h:outputText value="Filtros" />
-			</f:facet>
-			<f:facet name="header">
-				<h:outputText value="Usuário" />
-			</f:facet>
-
-			<p:outputLabel value="Nome: " for="nomeField" />
-			<p:inputText id="nomeField" value="#{usuarioBean.entidade.nome}"
-				label="Nome" style="width:350px" />
-
-			<p:outputLabel value="E-mail: " for="emailField" />
-			<p:inputText id="emailField" value="#{usuarioBean.entidade.email}"
-				label="Nome" style="width:350px" />
-
-			<p:outputLabel value="Nascimento: " for="nascimentoField" />
-			<p:calendar id="nascimentoField"
-				value="#{usuarioBean.entidade.nascimento}" label="Nascimento" />
-
-			<p:commandButton id="btnNovo" value="Novo"
-				action="#{usuarioBean.save()}" ajax="false" />
-			<p:commandButton id="btnLimpar" value="Limpar"
-				action="#{usuarioBean.limpar()}" ajax="false" />
-		</p:panelGrid>
-
-
-		<p:dataTable id="dataTableEntidades" border="1" var="entidade"
-			value="#{usuarioBean.entidades}">
-			<p:column>
-				<f:facet name="header">ID</f:facet>
-				<h:outputText value="#{entidade.id}" />
-			</p:column>
-			<p:column>
-				<f:facet name="header">Nome</f:facet>
-				<h:outputText value="#{entidade.nome}" />
-			</p:column>
-			<p:column>
-				<f:facet name="header">Email</f:facet>
-				<h:outputText value="#{entidade.email}" />
-			</p:column>
-			<p:column>
-				<f:facet name="header">Nascimento</f:facet>
-				<h:outputText value="#{entidade.nascimento}">
-					<f:convertDateTime pattern="dd/MM/yyyy" />
-				</h:outputText>
-			</p:column>
-			<p:column>
-				<f:facet name="header">Opções</f:facet>
-				<p:commandButton value="Remover" ajax="false"
-					action="#{usuarioBean.remove(entidade)}"></p:commandButton>
-				<p:commandButton value="Editar" ajax="false"
-					action="#{usuarioBean.editar(entidade.id)}"></p:commandButton>
-			</p:column>
-		</p:dataTable>
+	script type="text/javascript">
+    function handleLoginRequest(xhr, status, args) {
+        if(args.validationFailed || !args.loggedIn) {
+            PF('dlg').jq.effect("shake", {times:5}, 100);
+        }
+        else {
+            PF('dlg').hide();
+            $('#loginLink').fadeOut();
+        }
+    }
+</script>
+ 
+ 
+<h:form>        
+    <h:outputLink value="javascript:void(0)" onclick="PF('dlg').show();" title="login">
+        <p:graphicImage name="/demo/images/login.png" />
+    </h:outputLink>
+     
+    <p:growl id="growl" sticky="true" showDetail="true" life="3000" />
+     
+    <p:dialog header="Login" widgetVar="dlg" resizable="false">
+        <h:panelGrid columns="2" cellpadding="5">
+            <h:outputLabel for="email" value="email" />
+            <p:inputText id="username" value="#{userLoginView.email}" required="true" label="email" />
+             
+            <h:outputLabel for="senha" value="senha:" />
+            <p:password id="senha" value="#{userLoginView.senha}" required="true" label="senha" />
+             
+            <f:facet name="footer">
+                <p:commandButton value="Login" update="growl" action="#{userLoginView.login}"
+                                 oncomplete="handleLoginRequest(xhr, status, args)" />
+            </f:facet>  
+        </h:panelGrid>
+    </p:dialog>    
+</h:form>
 	</h:form>
 </h:body>
 </html>
