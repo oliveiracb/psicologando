@@ -7,9 +7,11 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
+import br.edu.ifpb.esperanca.daw2.psicologando.entities.MaterialApoio;
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.Mural;
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.TerapiaAdj;
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.Usuario;
+import br.edu.ifpb.esperanca.daw2.services.MaterialApoioService;
 import br.edu.ifpb.esperanca.daw2.services.MuralService;
 import br.edu.ifpb.esperanca.daw2.services.TerapiaAdjService;
 import br.edu.ifpb.esperanca.daw2.services.UserService;
@@ -22,8 +24,9 @@ public class MuralBean implements Serializable{
 	private MuralService service;
 
 	protected Mural entidade;
+	
+	protected Collection<Mural> entidades;
 
-	protected List<Mural> entidades;
 
 	public MuralBean() {
 	}
@@ -37,6 +40,7 @@ public class MuralBean implements Serializable{
 	public void remove(Mural entidade) {
 		getService().remove(entidade);
 		limpar();
+		
 	}
 
 	public Mural getEntidade() {
@@ -52,7 +56,7 @@ public class MuralBean implements Serializable{
 	}
 
 	public void setEntidades(Collection<Mural> entidades) {
-		this.entidades = (List<Mural>) entidades;
+		this.entidades = entidades;
 	}
 
 	public void save() {

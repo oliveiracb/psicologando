@@ -7,10 +7,18 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
+<<<<<<< HEAD
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.Psicologo;
+=======
+import br.edu.ifpb.esperanca.daw2.psicologando.entities.MaterialApoio;
+>>>>>>> branch 'master' of https://github.com/oliveiracb/psicologando.git
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.TerapiaAdj;
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.Usuario;
+<<<<<<< HEAD
 import br.edu.ifpb.esperanca.daw2.services.PsicologoService;
+=======
+import br.edu.ifpb.esperanca.daw2.services.MaterialApoioService;
+>>>>>>> branch 'master' of https://github.com/oliveiracb/psicologando.git
 import br.edu.ifpb.esperanca.daw2.services.TerapiaAdjService;
 import br.edu.ifpb.esperanca.daw2.services.UserService;
 
@@ -20,7 +28,8 @@ public class TerapiaAdjBean implements Serializable{
 
 	protected TerapiaAdj entidade;
 
-	private List<TerapiaAdj> entidades;
+	protected Collection<TerapiaAdj> entidades;
+
 
 	public TerapiaAdjBean() {
 	}
@@ -35,6 +44,7 @@ public class TerapiaAdjBean implements Serializable{
 	public void remove(TerapiaAdj entidade) {
 		getService().remove(entidade);
 		limpar();
+		
 	}
 
 	public TerapiaAdj getEntidade() {
@@ -50,7 +60,7 @@ public class TerapiaAdjBean implements Serializable{
 	}
 
 	public void setEntidades(Collection<TerapiaAdj> entidades) {
-		this.entidades = (List<TerapiaAdj>) entidades;
+		this.entidades = entidades;
 	}
 
 	public void save() {

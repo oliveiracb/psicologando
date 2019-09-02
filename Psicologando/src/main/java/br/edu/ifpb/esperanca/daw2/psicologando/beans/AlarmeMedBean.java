@@ -11,11 +11,17 @@ import javax.inject.Named;
 
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.AlarmeMed;
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.MaterialApoio;
+<<<<<<< HEAD
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.TerapiaAdj;
+=======
+>>>>>>> branch 'master' of https://github.com/oliveiracb/psicologando.git
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.Usuario;
 import br.edu.ifpb.esperanca.daw2.services.AlarmeMedService;
 import br.edu.ifpb.esperanca.daw2.services.MaterialApoioService;
+<<<<<<< HEAD
 import br.edu.ifpb.esperanca.daw2.services.TerapiaAdjService;
+=======
+>>>>>>> branch 'master' of https://github.com/oliveiracb/psicologando.git
 import br.edu.ifpb.esperanca.daw2.services.UserService;
 
 @ViewScoped
@@ -24,9 +30,9 @@ public class AlarmeMedBean implements Serializable {
 	@Inject
 	private AlarmeMedService service;
 
+	protected AlarmeMed entidade;
+	
 	protected Collection<AlarmeMed> entidades;
-
-	private AlarmeMed entidade;
 
 	public AlarmeMedBean() {
 	}
@@ -81,5 +87,4 @@ public class AlarmeMedBean implements Serializable {
 	public AlarmeMedService getService() {
 		return service;
 	}
-
 }

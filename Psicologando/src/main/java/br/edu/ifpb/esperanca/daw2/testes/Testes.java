@@ -5,14 +5,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import br.edu.ifpb.esperanca.daw2.psicologando.entities.AlarmeMed;
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.MaterialApoio;
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.Mural;
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.Paciente;
-import br.edu.ifpb.esperanca.daw2.psicologando.entities.Psicologo;
-import br.edu.ifpb.esperanca.daw2.psicologando.entities.Usuario;
-import br.edu.ifpb.esperanca.daw2.psicologando.entities.AlarmeMed;
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.PontoApoio;
+import br.edu.ifpb.esperanca.daw2.psicologando.entities.Psicologo;
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.TerapiaAdj;
+import br.edu.ifpb.esperanca.daw2.psicologando.entities.Usuario;
 import br.edu.ifpb.esperanca.daw2.psicologando.interfaces.Psicologando;
 import br.edu.ifpb.esperanca.daw2.services.UserService;
 
