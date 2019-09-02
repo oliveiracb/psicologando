@@ -73,5 +73,5 @@ public class MaterialApoioBean implements Serializable {
 	public MaterialApoioService getService() {
 		return service;
 	}
-	
+
 }

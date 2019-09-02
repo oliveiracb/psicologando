@@ -42,7 +42,7 @@ public class AlarmeMedBean implements Serializable {
 		limpar();
 		
 	}
-	
+
 	public AlarmeMed getEntidade() {
 		return entidade;
 	}
