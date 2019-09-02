@@ -7,18 +7,13 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
-<<<<<<< HEAD
+
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.Psicologo;
-=======
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.MaterialApoio;
->>>>>>> branch 'master' of https://github.com/oliveiracb/psicologando.git
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.TerapiaAdj;
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.Usuario;
-<<<<<<< HEAD
 import br.edu.ifpb.esperanca.daw2.services.PsicologoService;
-=======
 import br.edu.ifpb.esperanca.daw2.services.MaterialApoioService;
->>>>>>> branch 'master' of https://github.com/oliveiracb/psicologando.git
 import br.edu.ifpb.esperanca.daw2.services.TerapiaAdjService;
 import br.edu.ifpb.esperanca.daw2.services.UserService;
 
