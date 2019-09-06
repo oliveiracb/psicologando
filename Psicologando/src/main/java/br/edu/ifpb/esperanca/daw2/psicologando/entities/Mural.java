@@ -15,8 +15,8 @@ import javax.persistence.SequenceGenerator;
 @Entity
 public class Mural implements Identificavel {
 	@Id
-	@GeneratedValue(generator="usuario_seq", strategy=GenerationType.SEQUENCE)
-	@SequenceGenerator(name="usuario_seq")
+	@GeneratedValue(generator="mural_seq", strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name="mural_seq")
 	private Long id;
 	
 	@ManyToOne

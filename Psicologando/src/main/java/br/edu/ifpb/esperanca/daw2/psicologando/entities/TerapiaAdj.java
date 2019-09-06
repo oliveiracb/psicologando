@@ -12,8 +12,8 @@ import javax.persistence.SequenceGenerator;
 @Entity
 public class TerapiaAdj implements Identificavel{
 	@Id
-	@GeneratedValue(generator="usuario_seq", strategy=GenerationType.SEQUENCE)
-	@SequenceGenerator(name="usuario_seq")
+	@GeneratedValue(generator="Terapia_seq", strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name="Terapia_seq")
 	private Long id;
 	
 	@ManyToOne

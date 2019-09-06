@@ -8,18 +8,19 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.SequenceGenerator;
 
 @Entity
 public class PontoApoio implements Identificavel{
 	@Id
-	@GeneratedValue(generator="usuario_seq", strategy=GenerationType.SEQUENCE)
-	@SequenceGenerator(name="usuario_seq")
+	@GeneratedValue(generator="ponto_seq", strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name="ponto_seq")
 	private Long id;
 	
-	@ManyToOne
-	@JoinColumn(name="id_paciente")
+	@ManyToMany
+	@JoinTable(name="paciente_ponto", joinColumns = @JoinColumn(name="id_p"), inverseJoinColumns = @JoinColumn(name="id_paciente"))
 	private Set<Paciente> pacientes;
 	
 	private URL local;

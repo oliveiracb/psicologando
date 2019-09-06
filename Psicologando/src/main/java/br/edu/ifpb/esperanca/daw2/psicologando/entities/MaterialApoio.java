@@ -7,17 +7,19 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 
 @Entity
 public class MaterialApoio implements Identificavel{
 	@Id
-	@GeneratedValue(generator="usuario_seq", strategy=GenerationType.SEQUENCE)
-	@SequenceGenerator(name="usuario_seq")
+	@GeneratedValue(generator="mate_seq", strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name="mate_seq")
 	private Long id;
 	
-	@OneToMany
+	@ManyToOne
+	@JoinColumn(name="id_psi")
 	private Psicologo psicologo;
 	
 	private String titulo;

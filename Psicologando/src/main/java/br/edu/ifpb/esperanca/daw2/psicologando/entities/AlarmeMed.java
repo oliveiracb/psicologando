@@ -15,8 +15,8 @@ import br.edu.ifpb.esperanca.daw2.psicologando.beans.AlarmeMedBean;
 @Entity
 public class AlarmeMed implements Identificavel{
 	@Id
-	@GeneratedValue(generator="usuario_seq", strategy=GenerationType.SEQUENCE)
-	@SequenceGenerator(name="usuario_seq")
+	@GeneratedValue(generator="alarme_seq", strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name="alarme_seq")
 	private Long id;
 	
 	@ManyToOne
