@@ -9,7 +9,7 @@
 		<class>br.edu.ifpb.esperanca.daw2.psicologando.entities.PontoApoio</class>
 		<class>br.edu.ifpb.esperanca.daw2.psicologando.entities.Psicologo</class>
 		<class>br.edu.ifpb.esperanca.daw2.psicologando.entities.TerapiaAdj</class>
-		<class>br.edu.ifpb.esperanca.daw2.psicologando.entities.AlarmMed</class>
+		<class>br.edu.ifpb.esperanca.daw2.psicologando.entities.AlarmeMed</class>
 	
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://192.168.4.170/psicologando"/>
