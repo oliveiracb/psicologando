@@ -37,7 +37,7 @@ public class PacienteBean implements Serializable{
 		limpar();
 	}
 
-	public Usuario getEntidade() {
+	public Paciente getEntidade() {
 		return entidade;
 	}
 

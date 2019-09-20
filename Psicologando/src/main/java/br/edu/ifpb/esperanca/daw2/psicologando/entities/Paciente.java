@@ -3,6 +3,7 @@ package br.edu.ifpb.esperanca.daw2.psicologando.entities;
 import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.Inheritance;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
