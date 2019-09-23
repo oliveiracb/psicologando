@@ -28,16 +28,15 @@
 			value="#{psicologoBean.entidades}">
 			<p:column>
 				<f:facet name="header">CRP</f:facet>
-				<h:outputText value="#{entidade.nascimento}">
-					<f:convertDateTime pattern="dd/MM/yyyy" />
+				<h:outputText value="#{entidade.crp}">
 				</h:outputText>
 			</p:column>
 			<p:column>
 				<f:facet name="header">Opções</f:facet>
 				<p:commandButton value="Remover" ajax="false"
-					action="#{pacienteBean.remove(entidade)}"></p:commandButton>
+					action="#{psicologoBean.remove(entidade)}"></p:commandButton>
 				<p:commandButton value="Editar" ajax="false"
-					action="#{pacienteBean.editar(entidade.id)}"></p:commandButton>
+					action="#{psicologoBean.editar(entidade.id)}"></p:commandButton>
 			</p:column>
 		</p:dataTable>
 	</h:form>
