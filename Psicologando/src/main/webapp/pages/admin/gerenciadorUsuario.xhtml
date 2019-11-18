@@ -12,21 +12,21 @@
 	<p:messages />
 
 	<h:form>
-		<p:panelGrid columns="2" >
+		<p:panelGrid columns="2">
 			<f:facet name="caption">
 				<h:outputText value="Filtros" />
 			</f:facet>
 			<f:facet name="header">
 				<h:outputText value="Usuário" />
 			</f:facet>
+			<p:outputLabel value="NOME: " for="nomeField" />
+			<p:inputText id="nomeField" value="#{usuarioBean.entidade.nome}"
+				label="Nome" style="width:350px" />
 
+				
 			<p:outputLabel value="CPF: " for="cpfField" />
 			<p:inputText id="cpfField" value="#{pacienteBean.entidade.cpf}"
 				label="CPF" style="width:350px" />
-				
-			<p:outputLabel value="CRP: " for="crpField" />
-			<p:inputText id="crpField" value="#{psicologoBean.entidade.crp}"
-				label="CRP" style="width:350px" />
 
 			<p:outputLabel value="E-mail: " for="emailField" />
 			<p:inputText id="emailField" value="#{usuarioBean.entidade.email}"
@@ -35,6 +35,12 @@
 			<p:outputLabel value="Nascimento: " for="nascimentoField" />
 			<p:calendar id="nascimentoField"
 				value="#{usuarioBean.entidade.nascimento}" label="Nascimento" />
+
+			<p:outputLabel value="Grupo: " for="grupoField" />
+			<p:selectOneButton id="grupoField" value="#{usuarioBean.entidade.grupo}">
+				<f:selectItem itemLabel="Psicologo" itemValue="Psicologo" />
+				<f:selectItem itemLabel="Paciente" itemValue="Paciente" />
+			</p:selectOneButton>
 
 			<p:commandButton id="btnNovo" value="Novo"
 				action="#{usuarioBean.save()}" ajax="false" />
@@ -56,6 +62,10 @@
 			<p:column>
 				<f:facet name="header">Email</f:facet>
 				<h:outputText value="#{entidade.email}" />
+			</p:column>
+			<p:column>
+				<f:facet name="header">Grupo</f:facet>
+				<h:outputText value="#{entidade.grupo}" />
 			</p:column>
 			<p:column>
 				<f:facet name="header">Nascimento</f:facet>
