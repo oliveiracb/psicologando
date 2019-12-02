@@ -20,6 +20,8 @@
 			<p:outputLabel value="CRP: " for="crpField" />
 			<p:inputText id="crpField" value="#{psicologoBean.entidade.crp}"
 				label="CRP" style="width:350px" />
+					<p:commandButton value="Adicionar" ajax="false"
+					action="#{psicologoBean.adicionar(entidade)}"></p:commandButton>
 			
 		</p:panelGrid>
 
