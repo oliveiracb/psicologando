@@ -3,7 +3,7 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	version="3.1">
-	<display-name>IFoto</display-name>
+	<display-name>Psicologando</display-name>
 	<servlet>
 		<servlet-name>Faces Servlet</servlet-name>
 		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
@@ -18,7 +18,7 @@
 		<param-value>redmond</param-value>
 	</context-param>
 	<welcome-file-list>
-		<welcome-file>/pages/private/gerenciadorUsuario.xhtml</welcome-file>
+		<welcome-file>/pages/admin/gerenciadorUsuario.xhtml</welcome-file>
 	</welcome-file-list>
 	<session-config>
 		<session-timeout>1</session-timeout>
