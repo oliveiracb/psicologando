@@ -17,11 +17,10 @@
 		style="width: 30%; text-align:center; margin: auto;">
 		<h:form id="formLogin" prependId="false"
 			onsubmit="action='j_security_check';">
-
+			
 			<h:panelGrid columns="2" style="text-align:center; margin: auto;">
 				<h:outputLabel for="j_username" value="Login:" />
 				<h:inputText id="j_username" />
-
 				<h:outputLabel for="j_password" value="Senha:" />
 				<h:inputSecret id="j_password" />
 				<p:commandButton id="btnLogin" value="Login" ajax="false" />
