@@ -8,23 +8,25 @@
 
 <h:head>
 	<title>Login</title>
+	
 </h:head>
-
 
 <h:body>
 	<p:messages />
+	
 	<p:panel header="Login"
 		style="width: 30%; text-align:center; margin: auto;">
+		<p:graphicImage value="./pages/Imagens/logo.png"/>
 		<h:form id="formLogin" prependId="false"
 			onsubmit="action='j_security_check';">
-			
+		
 			<h:panelGrid columns="2" style="text-align:center; margin: auto;">
 				<h:outputLabel for="j_username" value="Login:" />
 				<h:inputText id="j_username" />
 				<h:outputLabel for="j_password" value="Senha:" />
 				<h:inputSecret id="j_password" />
 				<p:commandButton id="btnLogin" value="Login" ajax="false" />
-				<p:link id="btnCad" value="Cadastrar"   ajax="false" href="../admin/gerenciadorUsuario.xhtml"/>
+				<p:link id="btnCad" value="Cadastrar"   ajax="false" href="../admin/gerenciadorUsuario.xhtml"/>			
 			</h:panelGrid>
 		</h:form>
 	</p:panel>

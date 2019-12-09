@@ -7,12 +7,14 @@
 	<title>Gerenciador de Usuários</title>
 </h:head>
 
-
 <h:body>
-	<p:messages />
 
 	<h:form>
-		<p:panelGrid columns="2">
+	
+		<p:messages id="messages" showDetail="true" closable="true">
+			<p:autoUpdate />
+		</p:messages>
+		<p:panelGrid columns="3">
 			<f:facet name="caption">
 				<h:outputText value="Filtros" />
 			</f:facet>
@@ -22,29 +24,34 @@
 			<p:outputLabel value="NOME: " for="nomeField" />
 			<p:inputText id="nomeField" value="#{usuarioBean.entidade.nome}"
 				label="Nome" style="width:350px" />
+			<p:message for="cpfField" />
 
-				
+
 			<p:outputLabel value="CPF: " for="cpfField" />
 			<p:inputText id="cpfField" value="#{pacienteBean.entidade.cpf}"
 				label="CPF" style="width:350px" />
+			<p:message for="cpfField" />
 
 			<p:outputLabel value="E-mail: " for="emailField" />
 			<p:inputText id="emailField" value="#{usuarioBean.entidade.email}"
 				label="Nome" style="width:350px" />
-				<p:outputLabel value="Senha: " for="senhaField" />
+			<p:message for="cpfField" />
+			<p:outputLabel value="Senha: " for="senhaField" />
 			<p:password id="senhaField" value="#{usuarioBean.entidade.senha}"
 				label="Nome" style="width:350px" />
+			<p:message for="cpfField" />
 
 			<p:outputLabel value="Nascimento: " for="nascimentoField" />
 			<p:calendar id="nascimentoField"
 				value="#{usuarioBean.entidade.nascimento}" label="Nascimento" />
-
+			<p:message for="cpfField" />
 			<p:outputLabel value="Grupo: " for="grupoField" />
-			<p:selectOneButton id="grupoField" value="#{usuarioBean.entidade.grupo}">
+			<p:selectOneButton id="grupoField"
+				value="#{usuarioBean.entidade.grupo}">
 				<f:selectItem itemLabel="Psicologo" itemValue="Psicologo" />
 				<f:selectItem itemLabel="Paciente" itemValue="Paciente" />
 			</p:selectOneButton>
-
+			<p:message for="cpfField" />
 			<p:commandButton id="btnNovo" value="Novo"
 				action="#{usuarioBean.save()}" ajax="false" />
 			<p:commandButton id="btnLimpar" value="Limpar"

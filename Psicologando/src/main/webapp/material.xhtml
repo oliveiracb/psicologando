@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui" xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+	
+<h:head>
+	<title>Material</title>
+	<p:graphicImage value="./pages/Imagens/logo.png" />
+
+</h:head>
+	<h:body>
+	<ui:include src="menu.xhtml"/>
+	<h:form>
+    <p:growl id="msgs" showDetail="true" skipDetailIfEqualsSummary="true" />
+ 
+    <p:panel id="livro1" header="1. O ano em que eu disse sim" footer="Disponível em: https://www.buzzfeed.com/br/ramosaline/livros-saude-mental" style="margin-bottom:20px">
+        <h:panelGrid columns="2" cellpadding="10">
+            <p:graphicImage value="./pages/Imagens/livro1.png" />
+            <h:outputText
+                value="Shonda Rhimes já é um espetáculo por si só ao ser produtora das aclamadas séries Grey’s Anatomy, Private Practice, Scandal e How to Get Away with Murder. Porém, tanto trabalho fez com que ela esquecesse de si mesma e se dedicasse totalmente ao que os outros queriam e exigiam. Após uma provocação de sua irmã, Shonda percebeu que precisava retomar a sua vida para si e buscar a sua própria felicidade.
+Acompanhar o processo de mudança e transformação da roteirista e produtora é inspirador. A cada mudança de Shonda, você vai se sentir mais motivado a olhar sua própria vida e ver como se tornar uma pessoa melhor. A escrita intimista de Shonda faz com que em vários momentos você sinta que está conversando com a sua melhor amiga, o que torna tudo mais fácil e gostoso." />
+        </h:panelGrid>
+    </p:panel>
+    <p:panel id="livro2" header="2. Alucinadamente Feliz, Jenny Lawson" footer="Disponível em: https://www.buzzfeed.com/br/ramosaline/livros-saude-mental" style="margin-bottom:20px">
+        <h:panelGrid columns="2" cellpadding="10">
+            <p:graphicImage value="./pages/Imagens/livro2.jpg" />
+            <h:outputText
+                value="Foi escrevendo sobre a sua vida em seu blog (e no Twitter) que Jenny Lawson atraiu um número grande de seguidores que se identificava com os seus problemas, principalmente com os seus distúrbios mentais. Eles são vários, Jenny é uma depressiva altamente funcional com transtorno de ansiedade grave, depressão clínica moderada, distúrbio de automutilação brando, transtorno de personalidade esquiva e um ocasional transtorno de despersonalização, além de tricotilomania (que é a compulsão em arrancar os cabelos).
+
+Porém, mesmo assim, Jenny decidiu lutar pela vida e para ser feliz. Neste livro, ela fala abertamente sobre seus transtornos mentais e o impacto deles em seu dia a dia e no de pessoas queridas. O maior ensinamento de Alucinadamente Feliz é que tudo fica mais fácil quando você conversa sobre essas doenças abertamente. Jenny é uma pessoa extremamente divertida, que já viveu as coisas mais malucas. Por isso a sua escrita é tão leve e engraçada. Mesmo que ela fale sobre um problema grave, vai conseguir um sorriso seu. Sabe por quê? Porque quando a gente se permite sofrer, aprendemos a viver intensamente os momentos de alegria." />
+        </h:panelGrid>
+	</p:panel>
+	
+    <p:panel id="livro3" header="3. O Demônio do Meio Dia, Andrew Solomon" footer="Disponível em: https://www.buzzfeed.com/br/ramosaline/livros-saude-mental" style="margin-bottom:20px">
+        <h:panelGrid columns="2" cellpadding="10">
+            <p:graphicImage value="./pages/Imagens/livro3.png" />
+            <h:outputText
+                value="O escritor Andrew Solomon tinha acabado de lançar um livro, algo que ele tanto desejava, quando percebeu que estava depressivo. No livro O Demônio do Meio-Dia, ele conta o seu processo de descobrir e tratar a doença, mas vai um pouco além: fala da depressão por meio de estudos científicos, dados e depoimentos de testemunhas.
+
+A leitura é densa, mas esclarece com detalhes quais são os impactos da depressão em diversas populações. E mesmo assim, pode trazer conforto para quem compartilha da doença e pode se encontrar quando o livro descreve exatamente o que está vivendo." />
+        </h:panelGrid>
+        </p:panel>
+        <p:panel id="livro4" header="4. Plano B, Sheryl Sandberg e Adam Grant" footer="Disponível em: https://www.buzzfeed.com/br/ramosaline/livros-saude-mental" style="margin-bottom:20px">
+        <h:panelGrid columns="2" cellpadding="10">
+            <p:graphicImage value="./pages/Imagens/livro4.jpg" />
+            <h:outputText
+                value="Sheryl Sandberg, chefe de operações do Facebook, teve que refazer toda a sua vida após encontrar o seu marido morto no chão de uma sala de ginástica. O processo do luto fez com que ele mergulhasse profundamente em seus sentimentos. Sheryl precisou encontrar uma forma de superar traumas, sejam eles a morte de uma pessoa querida, uma agressão sexual, a perda de um emprego ou a vivência de um desastre natural ou de uma guerra. Com a ajuda de seu amigo, Adam Grant, que é escritor e psicólogo, ela conta a sua história e também traz dados e informações úteis para quem precisa recomeçar a vida e para quem deseja ser um apoio." />
+        </h:panelGrid>
+	</p:panel>
+
+</h:form>
+	
+</h:body>
+</html>

@@ -18,7 +18,7 @@
 		<param-value>redmond</param-value>
 	</context-param>
 	<welcome-file-list>
-		<welcome-file>/pages/admin/gerenciadorUsuario.xhtml</welcome-file>
+		<welcome-file>/pages/public/login.xhtml</welcome-file>
 	</welcome-file-list>
 	<session-config>
 		<session-timeout>1</session-timeout>

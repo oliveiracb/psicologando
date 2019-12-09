@@ -8,14 +8,19 @@
 	
 <h:head>
 	<title>Página Inicial</title>
+	<p:graphicImage value="./pages/Imagens/logo.png"/>
+
 </h:head>
+	
 	<h:body>
+	<ui:include src="menu.xhtml"/>
+	
 	<h:form>
     <p:growl id="msgs" showDetail="true" skipDetailIfEqualsSummary="true" />
  
     <p:panel id="depressao" header="Depressão" footer="VIDA, Minha. Ansiedade: causas, sintomas e tratamentos. Disponível em: https://www.minhavida.com.br/saude/materias/1525-o-que-e-depressao. Acesso em: 07 de dezembro de 2018." style="margin-bottom:20px">
         <h:panelGrid columns="2" cellpadding="10">
-            <p:graphicImage name="demo/images/godfather/godfather1.jpg" />
+            <p:graphicImage value="./pages/Imagens/depressao.jpg" />
             <h:outputText
                 value="Todo mundo uma vez ou outra na vida se sente deprimido ou triste. É uma reação natural à perda, aos desafios da vida e à baixa auto-estima. Mas, às vezes, o sentimento de tristeza se torna intenso, dura longos períodos e retira a pessoa da vida normal. A depressão é o mais comum dos transtornos mentais, mas é uma doença tratável. Os tipos de depressão são: clássica, distimia, transtorno bipolar e sazonal.
 
@@ -26,12 +31,12 @@ Reconhecer a depressão é frequentemente o maior obstáculo para diagnosticar e
     </p:panel>
     <p:panel id="ansiedade" header="Ansiedade" footer="VIDA, Minha. Ansiedade: causas, sintomas e tratamentos. Disponível em: https://www.minhavida.com.br/saude/materias/1525-o-que-e-depressao. Acesso em: 07 de dezembro de 2018." style="margin-bottom:20px">
         <h:panelGrid columns="2" cellpadding="10">
-            <p:graphicImage name="demo/images/godfather/godfather1.jpg" />
+            <p:graphicImage value="./pages/Imagens/ansiedade.png" />
             <h:outputText
                 value="A ansiedade é uma emoção normal do ser humano, comum ao se enfrentar algum problema no trabalho, antes de uma prova ou diante de decisões difíceis do dia a dia. No entanto, a ansiedade excessiva pode se tornar uma doença, ou melhor, um distúrbio de ansiedade.
 Pessoas que sofrem de distúrbios de ansiedade sentem uma preocupação e medo extremos em situações simples da rotina, além de alguns sintomas físicos, o que atrapalha suas atividades cotidianas, já que eles são difíceis de controlar." />
         </h:panelGrid>
-
+	</p:panel>
 </h:form>
 </h:body>
 </html>

@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Collection;
 
 import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -55,6 +57,8 @@ public class UsuarioBean implements Serializable {
 	public void save() {
 		getService().save(entidade);
 		limpar();
+		 FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Sucesso", "Usuário cadastrado"));
+		 FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Error", "Usuário não encontrado"));
 	}
 
 	public void editar(Long id) {
@@ -69,6 +73,7 @@ public class UsuarioBean implements Serializable {
 
 	protected Usuario newEntidade() {
 		return new Usuario();
+ 
 	}
 
 	public UserService getService() {
