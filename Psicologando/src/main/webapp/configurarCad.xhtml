@@ -5,14 +5,14 @@
 	xmlns:p="http://primefaces.org/ui" xmlns:o="http://omnifaces.org/ui"
 	xmlns:of="http://omnifaces.org/functions"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
-	
+
 <h:head>
 	<title>Configurações do Cadastro</title>
 </h:head>
 
 <h:body>
 	<h:form>
-	
+
 		<p:messages id="messages" showDetail="true" closable="true">
 			<p:autoUpdate />
 		</p:messages>
@@ -38,6 +38,7 @@
 			<p:inputText id="emailField" value="#{usuarioBean.entidade.email}"
 				label="Nome" style="width:350px" />
 			<p:message for="cpfField" />
+			
 			<p:outputLabel value="Senha: " for="senhaField" />
 			<p:password id="senhaField" value="#{usuarioBean.entidade.senha}"
 				label="Nome" style="width:350px" />
@@ -62,30 +63,30 @@
 
 
 		<p:dataTable id="dataTableEntidades" border="1" var="entidade"
-			value="#{usuarioBean.entidades}"/>
-			<p:column>
-				<f:facet name="header">ID</f:facet>
-				<h:outputText value="#{entidade.id}" />
-			</p:column>
-			<p:column>
-				<f:facet name="header">Nome</f:facet>
-				<h:outputText value="#{entidade.nome}" />
-			</p:column>
-			<p:column>
-				<f:facet name="header">Email</f:facet>
-				<h:outputText value="#{entidade.email}" />
-			</p:column>
-			<p:column>
-				<f:facet name="header">Grupo</f:facet>
-				<h:outputText value="#{entidade.grupo}" />
-			</p:column>
-			<p:column>
-				<f:facet name="header">Nascimento</f:facet>
-				<h:outputText value="#{entidade.nascimento}">
-					<f:convertDateTime pattern="dd/MM/yyyy" />
-				</h:outputText>
-		
-			</p:column>
+			value="#{usuarioBean.entidades}" />
+		<p:column>
+			<f:facet name="header">ID</f:facet>
+			<h:outputText value="#{entidade.id}" />
+		</p:column>
+		<p:column>
+			<f:facet name="header">Nome</f:facet>
+			<h:outputText value="#{entidade.nome}" />
+		</p:column>
+		<p:column>
+			<f:facet name="header">Email</f:facet>
+			<h:outputText value="#{entidade.email}" />
+		</p:column>
+		<p:column>
+			<f:facet name="header">Grupo</f:facet>
+			<h:outputText value="#{entidade.grupo}" />
+		</p:column>
+		<p:column>
+			<f:facet name="header">Nascimento</f:facet>
+			<h:outputText value="#{entidade.nascimento}">
+				<f:convertDateTime pattern="dd/MM/yyyy" />
+			</h:outputText>
+
+		</p:column>
 	</h:form>
 </h:body>
 </html>
