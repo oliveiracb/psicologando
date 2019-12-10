@@ -13,10 +13,35 @@
 </h:head>
 	<h:body>
 	<ui:include src="menu.xhtml"/>
-	<p:contentFlow value="#{teraView.tera}" var="image">
-    <p:graphicImage name="./pages/Imagens/logo.png" styleClass="content" />
-    <div class="caption">#{image}</div>
-</p:contentFlow>
+	<p:panel id="acupuntura" header="Acunpuntura" footer="https://pt.wikipedia.org/wiki/Acupuntura" style="margin-bottom:20px">
+        <h:panelGrid columns="2" cellpadding="10">
+            <p:graphicImage value="./pages/Imagens/images/acu.jpg" />
+            <h:outputText
+                value="É uma forma de medicina alternativa e um ramo da medicina tradicional (MTC) no qual agulhas são inseridas no corpo do paciente. A medicina tradicional chinesa é uma pseudociência pois suas teorias e práticas são baseadas em crenças contrárias ao conhecimento científico." />
+        </h:panelGrid>
+    </p:panel>
+    <p:panel id="med" header="Meditação e Relaxamento" footer="https://www.eusemfronteiras.com.br/as-diferencas-e-os-beneficios-da-meditacao-e-relaxamento/" style="margin-bottom:20px">
+        <h:panelGrid columns="2" cellpadding="10">
+            <p:graphicImage value="./pages/Imagens/images/med.jpg" />
+            <h:outputText
+                value="A meditação é uma técnica muito antiga e que está se dissolvendo cada vez mais no Brasil. Devido a seus benefícios, esta técnica também está sendo implantada em escolas para ajudar as crianças a se concentrarem melhor. Vale ressaltar que a meditação trabalha o aspecto físico, mental e emocional. Já o relaxamento por sua vez, como mesmo afirma o nome tem a função de promover um relaxamento para pessoa, um momento de desconexão com os problemas e preocupações. Para isso, basta deitar, ou sentar, e fazer alguns exercícios de respiração. É possível colocar uma música e se 'desligar da tomada'." />
+        </h:panelGrid>
+    </p:panel>
+     <p:panel id="pil" header="Pilates" footer="https://www.eusemfronteiras.com.br/as-diferencas-e-os-beneficios-da-meditacao-e-relaxamento/" style="margin-bottom:20px">
+        <h:panelGrid columns="2" cellpadding="10">
+            <p:graphicImage value="./pages/Imagens/images/pilates.jpg" />
+            <h:outputText
+                value="O pilates é uma modalidade capaz de oferecer muitos benefícios ao praticante, promovendo maior consciência corporal e aumentando a flexibilidade. Além disso, sua prática pode ajudar a aumentar o prazer durante as relações sexuais. Conheça abaixo o que é pilates, quais os seus tipos, benefícios e como praticar." />
+        </h:panelGrid>
+    </p:panel>
+    <p:panel id="tera" header="Arteterapia" footer="https://amenteemaravilhosa.com.br/arteterapia-definicao-beneficios/" style="margin-bottom:20px">
+        <h:panelGrid columns="2" cellpadding="10">
+            <p:graphicImage value="./pages/Imagens/images/tera.jpg" />
+            <h:outputText
+                value="A arteterapia pode ser definida como uma disciplina com especificidades e limites concretos. É uma ajuda – terapia para alguns – que utiliza as artes plásticas como meio para recuperar ou melhorar a saúde mental, o bem-estar emocional e social da pessoa. Os objetivos da arteterapia são os mesmos dos da psicoterapia.
+Esta ajuda foca a arte como forma de comunicação, deste modo, ajuda a expressar e comunicar sentimentos, facilitando a reflexão, a comunicação, e permitindo as mudanças necessárias no comportamento. A criação artística, tomada como ação, coloca em marcha um processo: intervém no espaço terapêutico e invade a realidade, reavaliando-a." />
+        </h:panelGrid>
+    </p:panel>
 	
 </h:body>
 </html>
