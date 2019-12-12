@@ -14,7 +14,7 @@ public class PsicologandoConcreto implements Psicologando{
 	@Override
 	public Usuario cadastrarUsu(Usuario usuario) {
 		// TODO Auto-generated method stub
-		return null;
+		return usuario;
 	}
 
 	@Override
@@ -79,13 +79,13 @@ public class PsicologandoConcreto implements Psicologando{
 	@Override
 	public PontoApoio indicarPontoMaisProximo(PontoApoio pontoApoio, Psicologo psicologo) {
 		// TODO Auto-generated method stub
-		return null;
+		return pontoApoio;
 	}
 
 	@Override
 	public TerapiaAdj addTerapia(TerapiaAdj TerapiaAdjuvante, Psicologo indicaTerapia) {
 		// TODO Auto-generated method stub
-		return null;
+		return TerapiaAdjuvante;
 	}
 
 	@Override
