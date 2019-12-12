@@ -1,6 +1,7 @@
 package br.edu.ifpb.esperanca.daw2.psicologando.beans;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -19,7 +20,7 @@ import br.edu.ifpb.esperanca.daw2.services.TerapiaAdjService;
 import br.edu.ifpb.esperanca.daw2.services.UserService;
 
 public class MuralBean implements Serializable{
-	private static final Usuario texto = null;
+	private ArrayList<String> texto;
 
 	
 	@Inject
@@ -63,11 +64,14 @@ public class MuralBean implements Serializable{
 	public void save() {
 		getService().save(entidade);
 		limpar();
+		{FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Sucesso", "Usuário cadastrado"));	
+		}
 	}
 
 	public void editar(Long id) {
 		this.getEntidade().setId(id);
 		save();
+		
 	}
 
 	public void limpar() {

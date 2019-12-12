@@ -19,7 +19,9 @@
 
 		<h:panelGrid columns="2" style="margin-top: 10px">
 			<p:commandButton value="Enviar" update="display"
-				action="#{muralBean.save()}" />
+				action="#{muralBean.save(entidade)}" />
+			<p:commandButton id="btnCriar" value="Criar"
+				action="#{usuarioBean.save()}" ajax="false" />
 
 			<p:commandButton value="Limpar" type="button"
 				onclick="PF('editorWidget').clear();" icon="pi pi-times" />
