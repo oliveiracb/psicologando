@@ -11,8 +11,8 @@
 </h:head>
 
 <h:body>
+	<ui:include src="menu.xhtml" />
 	<h:form>
-
 		<p:messages id="messages" showDetail="true" closable="true">
 			<p:autoUpdate />
 		</p:messages>
@@ -55,7 +55,7 @@
 				<f:selectItem itemLabel="Paciente" itemValue="Paciente" />
 			</p:selectOneButton>
 			<p:message for="cpfField" />
-			<p:commandButton id="btnNovo" value="Novo"
+			<p:commandButton id="btnCriar" value="Criar"
 				action="#{usuarioBean.save()}" ajax="false" />
 			<p:commandButton id="btnLimpar" value="Limpar"
 				action="#{usuarioBean.limpar()}" ajax="false" />
@@ -85,7 +85,6 @@
 			<h:outputText value="#{entidade.nascimento}">
 				<f:convertDateTime pattern="dd/MM/yyyy" />
 			</h:outputText>
-
 		</p:column>
 	</h:form>
 </h:body>

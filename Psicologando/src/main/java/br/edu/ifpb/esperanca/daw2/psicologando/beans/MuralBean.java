@@ -5,6 +5,8 @@ import java.util.Collection;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 
 import br.edu.ifpb.esperanca.daw2.psicologando.entities.MaterialApoio;
@@ -26,8 +28,7 @@ public class MuralBean implements Serializable{
 	protected Mural entidade;
 	
 	protected Collection<Mural> entidades;
-
-
+    
 	public MuralBean() {
 	}
 	
@@ -42,7 +43,7 @@ public class MuralBean implements Serializable{
 		limpar();
 		
 	}
-
+	
 	public Mural getEntidade() {
 		return entidade;
 	}
