@@ -53,13 +53,13 @@ public class UsuarioBean implements Serializable {
 	public void setEntidades(Collection<Usuario> entidades) {
 		this.entidades = entidades;
 	}
-
+    
 	public void save() {
 		getService().save(entidade);
 		limpar();
-		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Sucesso", "Usuário cadastrado"));
-		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Error", "Usuário não encontrado"));
-	}
+			{FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Sucesso", "Usuário cadastrado"));}	
+			{FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Error", "Usuário não encontrado"));}
+		}
 
 	public void editar(Long id) {
 		this.getEntidade().setId(id);
