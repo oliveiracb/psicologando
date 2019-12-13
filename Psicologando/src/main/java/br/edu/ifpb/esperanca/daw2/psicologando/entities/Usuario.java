@@ -19,7 +19,7 @@ public class Usuario implements Identificavel {
 	@SequenceGenerator(name="usuario_seq")
 	private Long id;
 	private String email;
-	private String nome;
+	private static String nome;
 	private String senha;
 	private Date nascimento;
 	private String grupo;
@@ -41,7 +41,7 @@ public class Usuario implements Identificavel {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getNome() {
+	public static String getNome() {
 		return nome;
 	}
 	public void setNome(String nome) {
